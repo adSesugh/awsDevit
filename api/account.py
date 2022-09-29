@@ -12,7 +12,7 @@ config = dotenv_values(".env")
 
 class Account:
     def __init__(self):
-        self.deta = Deta(config.DATABASE_KEY)
+        self.deta = Deta(config['DATABASE_KEY'])
         self.accounts = self.deta.Base('accounts')
 
     def create_account(self, formData):

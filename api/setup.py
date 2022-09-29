@@ -1,8 +1,6 @@
-import os
 import boto3
 from deta import Deta
-from dotenv import load_dotenv, dotenv_values
-#load_dotenv()
+from dotenv import dotenv_values
 
 config = dotenv_values(".env")
 
@@ -10,7 +8,7 @@ def check_access():
     """
         Grab active credentials to start
     """
-    project = Deta(config.DATABASE_KEY)
+    project = Deta(config['DATABASE_KEY'])
     creds = project.Base('accounts')
     credentials = creds.fetch({"status": 'active'})
 
