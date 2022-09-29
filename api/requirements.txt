@@ -1,0 +1,5 @@
+fastapi
+boto3
+deta
+botocore
+python-multipart

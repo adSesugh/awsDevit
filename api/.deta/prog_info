@@ -1,0 +1,1 @@
+{"id":"4cc14cc4-2757-477a-aa75-0cc0cfbf7b56","space":33016,"runtime":"python3.9","name":"smartDev","path":"nfhgdu","project":"a03a3kzz","account":"144798365827","region":"eu-central-1","deps":["fastapi","boto3","deta","python-multipart","botocore"],"envs":null,"public":true,"log_level":"off","cron":""}
