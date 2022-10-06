@@ -1,6 +1,6 @@
-## AWSDevit
+## AWSDevit Tool
 
-This is a mobile app that is tailored to help cloud engineer in carrying out their basic routine job on AWS platform.
+This is a web/mobile app that is tailored to help cloud engineer in carrying out their basic routine job on AWS platform.
 
 ### Features
 
