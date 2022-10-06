@@ -44,17 +44,25 @@ async def cost_explorer():
     )
     return response
 
-@app.get('/ec2-list/')
+@app.get('/list-instances/')
 async def get_all_ec2():
     ec2Instance = EC2()
     return ec2Instance.list_instances()
 
-@app.get('/ec2-instance/{instanceId}/')
-async def get_single_instance(instanceId: str):
-    return {"message": "Coming soon"}
+@app.get('/create-ec2-instance')
+async def create_ec2_instance():
+    ec2Instance = EC2()
+    return ec2Instance.create_instance()
 
-@app.post('/ec2-operation/{action}/')
+@app.get('/get_ec2-instance/{instanceId}/')
+async def get_single_instance(instanceId: str):
+    ec2Instance = EC2()
+
+    return ec2Instance.get_single_instance(instanceId)
+
+@app.put('/ec2-operation/{action}/')
 async def ec2_actions(instanceIds: str, action: ActionModel):
     ids = instanceIds.split(',')
-    return {"action": action, "instanceIds": ids}
+    ec2Instance = EC2()
+    return ec2Instance.mark_instance_as(ids, action)
 
