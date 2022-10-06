@@ -11,7 +11,9 @@ This is a mobile app that is tailored to help cloud engineer in carrying out the
 - CloudWatch
 - etc.
 
-### Technologies used
+### Used tools
 
-- Python for api
-- React Native for Mobile App
+- Python programming language for api.
+- React Native for Mobile App.
+- MongoDB api by deta cloud service.
+- AWS Python SDK.
