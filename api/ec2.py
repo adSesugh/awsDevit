@@ -7,7 +7,6 @@ import logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger()
 
-
 class EC2:
 
     def __init__(self):
@@ -78,10 +77,6 @@ class EC2:
                 raise error
 
         return {"message": "Command sent successfully"}
-
-    def create_image(self):
-        image = self.ec2.create_image(InstanceId='i-1234567890abcdef0', Name='AWSDevit')
-        return image
 
     def get_ami_id(self):
         """
