@@ -16,8 +16,10 @@ def check_access():
         pass
 
     session = boto3.Session(
-        aws_access_key_id=credential['accessId'],
-        aws_secret_access_key=credential['secretKey'],
+        #aws_access_key_id=credential['accessId'],
+        #aws_secret_access_key=credential['secretKey'],
+        aws_access_key_id=config['Access_Key_ID'],
+        aws_secret_access_key=config['Secret_Access_Key'],
     )
 
     return session 
