@@ -36,11 +36,11 @@ class EC2:
             for instance in instanceIds:
                 # check the action state and issue appropriate command to be executed on the specified instance
                 if action is ActionModel.Start:
-                    ec2.start_instances(instance)
+                    ec2.start_instances(InstanceIds=[instance])
                 elif action is ActionModel.Stop:
-                    ec2.stop_instances(instance)
+                    ec2.stop_instances(InstanceIds=[instance])
                 elif action is ActionModel.Terminate:
-                    ec2.terminate_instance(instance)
+                    ec2.terminate_instance(InstanceIds=[instance])
             
         except ClientError as error:
             if error.response['Error']['Code'] == 'LimitExceededException':
